@@ -1,12 +1,42 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+//生命周期
 
-ReactDOM.render(<App />, document.getElementById('root'));
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+import React from 'react'
+import ReactDom from 'react-dom'
+
+
+class App extends React.Component{
+  state={
+      msg:'-'
+  };
+    render(){
+        return(
+
+            <div className='app'>
+
+                <h3>fetch</h3>
+                <input type='button' value='读静态的json文件' onClick={this.getJson}/>
+                <input type='button' value='读接口_地址栏传参' onClick={this.getNode}/>
+                <input type='button' value='读接口_非地址栏传参' onClick={this.postNode}/>s
+
+            </div>
+        )
+    }
+   getJson=()=>{
+        fetch(
+            `/data/usr.json`
+        ).then(
+            res=>console.log(res)
+        )
+   };
+    getNode=()=>{};
+    postNode=()=>{};
+
+
+}
+
+
+ReactDom.render(
+    <App/>,
+    document.querySelector('#app')
+)
