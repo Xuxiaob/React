@@ -44,6 +44,17 @@ module.exports = {
           content:"@cparagraph(10,40)"//正文
         }
       }
-    ]
+    ],
+    'user':{
+      "err": mr.integer(0,2),
+      "msg": "已登录",
+      "data": {
+        "follow": mr.integer(0,0),
+        "fans": mr.integer(0,0),
+        "nikename": mr.cname(),
+        "icon": mr.image('20x20',mr.color(),mr.cword(1)),
+        "time": mr.integer(13,13)
+      }
+    }
   })
 };

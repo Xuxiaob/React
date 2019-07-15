@@ -1,0 +1,6 @@
+/*.content .cell{width:6.4rem; margin:0 auto;}*/
+/*.cell { padding:0 0.4rem;}*/
+.cell { color:#494d4d; padding:0.2rem 0; border-bottom:1px dashed #ccc;}
+.cell  h2{max-height:0.9rem; font-size:0.33rem; overflow:hidden;}
+.cell  p{max-height:1.8rem; margin-top:0.05rem;overflow:hidden;}
+/*.cell{clear: both;margin-bottom:1rem;}*/
